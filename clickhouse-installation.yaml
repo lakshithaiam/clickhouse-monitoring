@@ -1,0 +1,102 @@
+apiVersion: clickhouse.altinity.com/v1
+kind: ClickHouseInstallation
+metadata:
+  name: clickhouse-cluster
+  namespace: clickhouse
+spec:
+  defaults:
+    templates: 
+      dataVolumeClaimTemplate: default
+      podTemplate: clickhouse-pod
+      serviceTemplate: clickhouse-service
+
+  configuration:
+    clusters:
+      - name: replicated
+        layout:
+          shardsCount: 2
+          replicasCount: 0
+    zookeeper:
+      nodes:
+        - host: my-zookeeper.zookeeper.svc.cluster.local
+          port: 2181
+
+    files:
+      config.xml: |
+        <clickhouse>
+          <prometheus>
+            <endpoint>/metrics</endpoint>
+            <port>9363</port>
+            <metrics>true</metrics>
+            <events>true</events>
+            <asynchronous_metrics>true</asynchronous_metrics>
+            <errors>true</errors>
+          </prometheus>
+
+          <storage_configuration>
+            <disks>
+              <backups>
+                <path>/var/lib/clickhouse/backups/</path>
+              </backups>
+            </disks>
+          </storage_configuration>
+        </clickhouse>
+
+  templates:
+    volumeClaimTemplates:
+      - name: default
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 900Mi
+          storageClassName: local-path
+
+      - name: backup
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 500Mi
+          storageClassName: local-path
+
+    podTemplates:
+      - name: clickhouse-pod
+        spec:
+          containers:
+            - name: clickhouse-pod
+              image: clickhouse/clickhouse-server:latest
+              ports:
+                - containerPort: 9000
+                - containerPort: 8123
+                - containerPort: 9363
+              resources:
+                requests:
+                  memory: "1Gi"
+                  cpu: "500m"
+                limits:
+                  memory: "1Gi"
+                  cpu: "1"
+              volumeMounts:
+                - name: backup
+                  mountPath: /var/lib/clickhouse/backups
+
+    serviceTemplates:
+      - name: clickhouse-service
+        generateName: "clickhouse-service"
+        metadata:
+          labels:
+            app: clickhouse
+        spec:
+          ports:
+            - name: http
+              port: 8123
+              targetPort: 8123
+            - name: native
+              port: 9000
+              targetPort: 9000
+            - name: prometheus
+              port: 9363
+              targetPort: 9363
