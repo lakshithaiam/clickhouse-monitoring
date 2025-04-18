@@ -532,7 +532,7 @@ alertmanager:
     receivers:
       - name: "slack-all"
         slack_configs:
-          - api_url: 'https://hooks.slack.com/services/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'
+          #- api_url: 'https://hooks.slack.com/services/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'
             icon_url: https://avatars3.githubusercontent.com/u/3380462
             send_resolved: true
             channel: '#slack-all'
@@ -555,7 +555,7 @@ alertmanager:
     
       - name: "slack-critical"
         slack_configs:
-          - api_url: 'https://hooks.slack.com/services/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'
+          #- api_url: 'https://hooks.slack.com/services/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'
             icon_url: https://avatars3.githubusercontent.com/u/3380462
             send_resolved: true
             channel: '#slack-critical'
@@ -578,10 +578,12 @@ alertmanager:
 
       - name: "slack-clickhouse"
         slack_configs:
-          - api_url: 'https://hooks.slack.com/services/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'
+          - api_url: 'https://hooks.slack.com/services/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'
+          #- api_url: 'https://hooks.slack.com/services/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'
             icon_url: https://avatars3.githubusercontent.com/u/3380462
             send_resolved: true
-            channel: '#slack-clickhouse'
+            channel: '#test-alerts'
+            #channel: '#slack-clickhouse'
             color: '{{ template "slack.color" . }}'
             title: '{{ template "slack.title" . }}'
             text: '{{ template "slack.text" . }}'

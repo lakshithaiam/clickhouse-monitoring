@@ -15,7 +15,7 @@ spec:
       - name: replicated
         layout:
           shardsCount: 2
-          replicasCount: 0
+          replicasCount: 2
     zookeeper:
       nodes:
         - host: my-zookeeper.zookeeper.svc.cluster.local
