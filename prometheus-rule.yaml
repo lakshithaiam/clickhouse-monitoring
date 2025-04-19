@@ -28,8 +28,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "https://runbooks.prometheus-operator.dev/"
-        dashboard_url: "https://grafana.com/grafana/dashboards/"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 
 
@@ -52,8 +52,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 #03-tested
     - alert: ClickhouseDiskSpaceLowOnDefault
@@ -73,8 +73,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 #04-tested
     - alert: ClickhouseDiskSpaceCriticalOnDefault
@@ -94,8 +94,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 #05-tested
     - alert: ClickhouseDiskSpaceLowOnBackups
@@ -115,8 +115,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 #06-not working
     - alert: ClickhouseReplicaErrors
@@ -136,8 +136,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
     #7
     - alert: ClickhouseNoAvailableReplicas
@@ -157,8 +157,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 
     #8
@@ -179,8 +179,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 
     #9
@@ -202,8 +202,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 
     #10
@@ -225,8 +225,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 
     #11
@@ -247,8 +247,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 
 
@@ -270,8 +270,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 
 
@@ -293,8 +293,8 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
 
 
 
@@ -316,5 +316,5 @@ spec:
           {{- range $k, $v := $labels }}
             • {{ $k }}: {{ $v }}
           {{- end }}
-        runbook_url: "http://runbook.url"
-        dashboard_url: "http://grafana.url"    
+        runbook_url: "https://www.nobl9.com/it-incident-management/runbook-example"
+        dashboard_url: "http://localhost:3000/d/thEkJB_Mz/clickhouse-dash?orgId=1&from=now-15m&to=now&timezone=browser&var-datasource=prometheus&var-instance=$__all&var-trends=1&var-peaks=null&refresh=30s"
